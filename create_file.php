@@ -12,9 +12,13 @@
 
 var_dump ($_POST);
 
+if (!is_dir('posts')){
+    mkdir ('posts');
+}
+
 $textzone = $_POST['textzone'];
 $titre = $_POST['titre'];
-$file = fopen($titre . ".txt", "w");
+$file = fopen('posts/' .$titre . ".txt", "w");
 fwrite($file, "Titre :".$titre. "\n". "Contenu :".$textzone);
 fclose($file);
 
