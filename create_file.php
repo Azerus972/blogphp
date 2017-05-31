@@ -13,8 +13,9 @@
 var_dump ($_POST);
 
 $textzone = $_POST['textzone'];
-$file = fopen("textzone.txt", "w");
-fwrite($file, $textzone);
+$titre = $_POST['titre'];
+$file = fopen($titre . ".txt", "w");
+fwrite($file, "Titre :".$titre. "/n". "Contenu :".$textzone);
 fclose($file);
 
 
