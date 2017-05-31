@@ -10,6 +10,7 @@
     
 <?php
 
+var_dump ($_GET);
 
 $textzone= $GET_['textzone'];
 $file = fopen("textzone.txt", "w");
