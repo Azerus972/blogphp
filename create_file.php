@@ -10,9 +10,9 @@
     
 <?php
 
-var_dump ($_GET);
+var_dump ($_POST);
 
-$textzone= $GET_['textzone'];
+$textzone = $_POST['textzone'];
 $file = fopen("textzone.txt", "w");
 fwrite($file, $textzone);
 fclose($file);
