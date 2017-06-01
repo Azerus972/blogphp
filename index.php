@@ -17,30 +17,30 @@
 <?php
 
 
-$log_directory = 'posts';
+$directory = 'posts';
 
 $results_array = array();
 
-if (is_dir($log_directory))
+if (is_dir($directory))
 {
-        if ($handle = opendir($log_directory))
+        if ($handle = opendir($directory))
         {
                 
                 while(($file = readdir($handle)) !== FALSE)
                 {
                         $results_array[] = $file;
+                        
                 }
                 closedir($handle);
         }
 }
 
 
-foreach($results_array as $value)
-{
-    echo $value . '<br />';
+foreach(glob("$directory/*") as $file) {
+    foreach(file($file) as $line) {
+        echo $line . "<br />";
+    }
 }
-
-
 
 
 ?>
