@@ -1,45 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Créer Post Blog</title>
 </head>
 
 <body>
+    <form action="create-file.php" method="POST">
+        <label>Titre</label>
+        <input type="text" name="titre">
+        <label>Contenu</label>
+        <textarea name="contenu" cols="30" rows="10">
 
-    <form method="post" action="create_file.php" class="form">
-
-
-
-        <input type="text" value="form" name="titre">
-
-
-        <p>
-            <label for="Zone de texte">Ecrivez ce que vous voulez</label><br />
-            <textarea name="textzone" name="textzone"></textarea>
-        </p>
-
-        <input type="submit" value="Envoyer">
-
-
+        </textarea>
+        <button>Envoyer</button>
     </form>
-
-    <style>
-        body {
-            background-color: blue;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        #titre {
-            color: red;
-        }
-    </style>
-
-
 </body>
 
 </html>

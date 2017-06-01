@@ -1,51 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Mon super blog</title>
 </head>
 <body>
-
-<h1>Mon BLog</h1>
-
-
-
-
-
-<?php
-
-
-$directory = 'posts';
-
-$results_array = array();
-
-if (is_dir($directory))
-{
-        if ($handle = opendir($directory))
-        {
-                
-                while(($file = readdir($handle)) !== FALSE)
-                {
-                        $results_array[] = $file;
-                        
-                }
-                closedir($handle);
+    <h1>Mon super blog !</h1>
+    <?php
+    $files = scandir("posts");
+    foreach($files as $file) {
+        if (is_dir($file)) {
+            continue;
         }
-}
-
-
-foreach(glob("$directory/*") as $file) {
-    foreach(file($file) as $line) {
-        echo $line . "<br />";
+        echo '<h2>'.basename($file, ".txt").'</h2>';
+        $content = file_get_contents('posts/'.$file);
+        echo '<p>'.$content.'</p>';
     }
-}
-
-
-?>
-
-
-
+    ?>
 </body>
 </html>
