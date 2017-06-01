@@ -8,6 +8,8 @@
 </head>
 <body>
     <h1>Mon super blog !</h1>
+
+
     <?php
     $files = scandir("posts");
     foreach($files as $file) {
@@ -17,7 +19,13 @@
         echo '<h2>'.basename($file, ".txt").'</h2>';
         $content = file_get_contents('posts/'.$file);
         echo '<p>'.$content.'</p>';
+        echo '<form  method="GET" action="delete.php">
+     <input type="hidden" name="aaa" value="'.$file.'">
+<input type="submit" value="delete">
+ </form>';
+        
     }
     ?>
+
 </body>
 </html>

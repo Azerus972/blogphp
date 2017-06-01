@@ -8,5 +8,22 @@
 </head>
 <body>
     
+
+
+<?php
+
+        $recup = $_GET['aaa'];
+        unlink('posts/'. $recup);
+    
+?>
+
+<script>
+
+
+location.href="index.php";
+
+
+</script>
+
 </body>
 </html>

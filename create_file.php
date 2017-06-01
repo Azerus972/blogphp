@@ -16,7 +16,7 @@ if (!is_dir('posts')){
     mkdir ('posts');
 }
 
-$textzone = $_POST['textzone'];
+$textzone = $_POST['contenu'];
 $titre = $_POST['titre'];
 $file = fopen('posts/' .$titre . ".txt", "w");
 fwrite($file, "Titre :".$titre. "\n". "Contenu :".$textzone);
