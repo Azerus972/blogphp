@@ -23,7 +23,7 @@
 
         </form>
 
-        <form action="encrypt.php" method="POST">
+        <form action="register.php" method="POST">
 
             <button> Inscription </button>
 
