@@ -31,3 +31,11 @@ if(isset($_POST['pseudo'])
 $msg ="Votre espace personnel est en cours de chargement la page va s'acutaliser automatiquement...";
 header('Refresh: 2; URL=../create.html');
 ?>
+
+
+<?php
+
+echo $msg;
+
+
+?>
