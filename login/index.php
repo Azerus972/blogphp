@@ -6,7 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
+<header>
+
+
+<?php
+$msg ="Votre espace personnel est en cours de chargement...";
+header('Refresh: 2; URL=../create.html');
+?>
+
+
+
+</header>
+
 <body>
     <h1><strong> Félicitation Vous êtes connecté!</strong></h1>
+
+
+
+
+<?php
+
+echo $msg;
+
+
+?>
 </body>
+
+
 </html>
